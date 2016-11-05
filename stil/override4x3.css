@@ -1,0 +1,6 @@
+.first-page {
+    background: url(../img/VismaLogo2.png), linear-gradient(75deg, rgba(10, 10, 10, 0) 40.6%, #fff 40.6%), url(../img/forside7.jpg);
+    background-position: bottom right, center center, center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 20%, contain, auto 100%;
+}

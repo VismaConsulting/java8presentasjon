@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700,400italic);
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: rgb(67, 67, 67);
+}
+
+.remark-slide-content {
+    background-image: url(../img/VismaLogo2.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 20%;
+}
+
+h1, h2, h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: normal;
+}
+
+h1 {
+    color: rgb(0, 122, 202);
+}
+
+.remark-code, .remark-inline-code {
+    font-family: 'Ubuntu Mono';
+}
+
+.first-page {
+    background: url(../img/VismaLogo2.png), linear-gradient(75deg, rgba(10, 10, 10, 0) 40.6%, #fff 40.6%), url(../img/forside7.jpg);
+    background-position: bottom right, center center, -50% center;
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 20%, contain, auto 100%;
+}
+
+.contrast-page {
+    background: url(../img/VismaLogo2.png), linear-gradient(75deg, rgba(0, 122, 202, 1) 50%, rgba(255, 255, 255, 1) 50%);
+    background-position: bottom right, center center;
+    background-repeat: no-repeat, no-repeat;
+    background-size: 20%, auto;
+}
+
+.contrast-page h1, .contrast-page h2, .contrast-page h3 {
+    color: white;
+}
+
+.values-page {
+    background: url(../img/values1.png);
+    background-size: cover;
+}
