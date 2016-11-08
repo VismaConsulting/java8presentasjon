@@ -42,26 +42,61 @@ Ferdigheter – kandidaten skal kunne
 
 # Agenda
 
-1. Eksempler på hvordan gjøre det med for-løkker, deretter hvordan gjøre det med streams
-2. Deep-dive
-3. ...
+0. Hvem er vi, hvor kommer vi fra, hva gjør vi til vanlig osv
+1. Hva er funksjonell programmering? (Historietime)
+2. Eksempler på funksjonell programmering i Java 8 - på slides
+3. Refaktorere til Java 8 i IntelliJ - med innspill fra studentene
+4. Hvordan er dette implementert i Java 8? (Default Methods in Interfaces)
+5. Spesifikke interfacer: Predicat, Function, Supplier, Consumer
+6. Liste opp hva vi har lært
+7. Øving
 
 ---
 
-# Innhold
+## Før Java 8
 
-```javascript
-function makeIterator(array){
-    var nextIndex = 0;
-    
-    return {
-       next: function(){
-           return nextIndex < array.length ?
-               {value: array[nextIndex++], done: false} :
-               {done: true};
-       }
+```java
+List<String> biltyper = Arrays.asList("VW", "Audi", "Jaguar");
+List<String> biltyperSomBegynnerPaaBokstavenA = new ArrayList<>();
+
+for (String biltype : biltyper) {
+    if (biltype.startsWith("A")) {
+        biltyperSomBegynnerPaaBokstavenA.add(biltype);
     }
 }
+```
+--
+## Etter Java 8
+
+```java
+List<String> biltyper = Arrays.asList("VW", "Audi", "Jaguar");
+List<String> biltyperSomBegynnerPaaBokstavenA = biltyper.stream()
+    .filter(biltype -> biltype.startsWith("a"))
+    .collect(Collectors.toList());
+```
+
+---
+
+## Før Java 8
+
+```java
+List<String> frukter = Arrays.asList("eple", "banan", "pære", "eple");
+Map<String, Integer> antallPerFrukt = new HashMap<>();
+
+for (String frukt : frukter) {
+    if (!antallPerFrukt.hasKey(frukt)) {
+        antallPerFrukt.put(frukt, 0);
+    }
+    antallPerFrukt.put(frukt, antallPerFrukt.get(frukt)++);
+}
+```
+--
+## Etter Java 8
+
+```java
+List<String> biltyper = Arrays.asList("VW", "Audi", "Jaguar");
+List<String> biltyperSomBegynnerPaaBokstavenA = biltyper.stream()
+    .groupingBy(Function.identity(), Collectors.counting());
 ```
 
 ---

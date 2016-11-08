@@ -20,8 +20,8 @@
 }
 
 .leo {
-    background: url(../img/VismaLogo2.png), linear-gradient(100deg, #fff 55%, rgba(10, 10, 10, 0) 55%), url(../img/thedonald.jpg);
-    background-position: bottom left, center center, -2000% center;
+    background: url(../img/VismaLogo2.png), linear-gradient(100deg, #fff 55%, rgba(10, 10, 10, 0) 55%), url(../img/leo.jpg);
+    background-position: bottom left, center center, 150% center;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 20%, contain, auto 100%;
 }

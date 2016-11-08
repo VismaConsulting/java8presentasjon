@@ -42,15 +42,15 @@ h1 {
 }
 
 .andersemil {
-    background: url(../img/VismaLogo2.png), linear-gradient(75deg, rgba(10, 10, 10, 0) 45%, #fff 45%), url(../img/andersemil.jpg);
+    background: url(../img/VismaLogo2.png), linear-gradient(75deg, rgba(10, 10, 10, 0) 44.8%, #fff 45%), url(../img/andersemil.jpg);
     background-position: bottom right, center center, -100% center;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 20%, contain, auto 100%;
 }
 
 .leo {
-    background: url(../img/VismaLogo2.png), linear-gradient(100deg, #fff 55%, rgba(255, 255, 255, 0) 55%), url(../img/thedonald.jpg);
-    background-position: bottom left, center center, 200% center;
+    background: url(../img/VismaLogo2.png), linear-gradient(100deg, #fff 55%, rgba(255, 255, 255, 0) 55%), url(../img/leo.jpg);
+    background-position: bottom left, center center, 100% center;
     background-repeat: no-repeat, no-repeat, no-repeat;
     background-size: 20%, contain, auto 100%;
 }
