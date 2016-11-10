@@ -99,11 +99,10 @@ Så hva er funksjonell programmering?
 
 Er det noen som kan forklare hva det er?
 
----
+. 
+.
 
-# Funksjonell programmering
-
-???
+Ikke det, nei.
 
 Funksjonell programmering er et paradigme innen programmering, på samme måte
 som objektorientert programmering. 
@@ -114,7 +113,7 @@ er mange som tror at det er veldig nytt og moderne. Faktisk har det eksistert i 
 
 ---
 
-## Lisp (1958)
+### Lisp (1958)
 
 ```lisp
 (DEFUN HELLO ()
@@ -122,32 +121,26 @@ er mange som tror at det er veldig nytt og moderne. Faktisk har det eksistert i 
 )
 ```
 
+???
+
+**Lisp** er det nest eldste språket som er i bruk i dag (Fortran er eldst).
+ Lisp er ikke et fullstendig funksjonelt språk, og har blant annet også elementer
+ av prosedyreorientering i seg.
+
 --
 
-## APL (1962)
+### APL (1962)
 ```apl
 'Hello World'
 ``` 
 
-## FP (Function Programming) (1977)
-
-```fp
-main = emit.(return ~"Hello, World!\n")
-```
-
 ???
-**Lisp** er det nest eldste språket som er i bruk i dag (Fortran er eldst).
- Lisp er ikke et fullstendig funksjonelt språk, og har blant annet også elementer
- av prosedyreorientering i seg.
- 
+
 **APL** kom i 1962.
 
-**FP** som ganske enkelt står for Function Programming kom i 1977. 
+--
 
-
----
-
-## Haskell 
+### Haskell (1987)
 
 ```haskell
  main = do putStrLn "Hello, world."
@@ -155,16 +148,106 @@ main = emit.(return ~"Hello, World!\n")
 
 ???
 
-Haskell kom i 1987, og var et forsøk på å lage en åpen standard for forskning på
-funksjonell programmering. 
+**Haskell** kom i 1987, og var et forsøk på å lage en åpen standard for forskning på
+funksjonell programmering.
+
+De siste årene har det kommet flere språk med funksjonelle elementer på JVM-plattformen. 
+Disse kompilerer altså til Java-bytecode, og kan kjøres av alle som har Java installert.
 
 ---
 
-# Konsepter
+### Javascript (1995)
 
-* First-class and higher-order functions
+```javascript
+alert("Hello World!")
+```
+
+???
+
+**JavaScript** ble laget på 10 dager i 1995, og er i dag veldig populært. JavaScript
+har en del elementer av funksjonalisme i seg, men kan ikke kalles et helt funksjonelt
+språk.
+
+--
+
+### Scala (2001)
+
+```scala
+object HelloWorld {
+  def main(args: Array[String]): Unit = {
+    println("Hello, world!")
+  }
+}
+```
+
+???
+
+Det mest populære av disse, er nok **Scala**, som kom i første versjon i 2001. 
+Det er både et objektorientert og funksjonelt språk.
+
+--
+
+### Clojure (2007)
+
+```clojure
+(println "Hello world!")
+```
+
+???
+
+Hvis man vil ha et fullstendig funksjonelt språk som fortsatt kjører på JVM, gå for
+**Clojure**. Det er en variant av Lisp, og ble startet i 2007. Clojure er en favoritt
+blant hipsterne i JVM-miljøet, og brukes på flere prosjekter rundt omkring.
+
+---
+# Begreper i funksjonell programmering
+
+???
+
+Hva er det som gjør et språk funksjonelt, da? Har dere noen forslag?
+
+Det er noen egenskaper som gjør et språk mer eller mindre funksjonelt.
+De viktigste av disse egenskapene er:
+
+--
+* First-class functions
+???
+**Førsteklasses funksjoner**, som betyr at funksjoner kan brukes på samme måte som variabler.
+Man kan sende inn en funksjon som et parameter til en annen funksjon, og den funksjonen kan
+igjen returnere en funksjon.
+
+En funksjon som tar inn eller returnerer en funksjon, kalles en **higher-order function**.
+
+--
+
+* Immutable Values
+
+???
+
+Når en variabel er **immutable**, ikke-muterbar, betyr det at den ikke kan forandres. Verdien settes én
+gang, og hvis du vil endre den siden, er du shit out of luck, og må heller nøye deg med å
+lage en ny variabel av samme typen med en annen verdi.
+
+Dette gjør det mye lettere å vite hva som foregår i en klasse, siden den kun blir instansiert 
+ett sted.
+
+--
+
 * Pure functions
+
+???
+
+**Rene funksjoner** betyr at outputen fra funksjonen kun er avhengig av inputen,
+og at det ikke er noen sideeffekter. I objektorientert programmering har man 
+mange urene funksjoner, siden man aksesserer feltene til klassen.
+
+Rene funksjoner går hånd-i-hanske med immutable verdier.
+
+--
+
 * Recursion
+
+--
 * Strict versus non-strict evaluation
 * Type systems
 * Referential transparency
