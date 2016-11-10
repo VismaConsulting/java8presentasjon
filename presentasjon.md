@@ -105,7 +105,8 @@ Er det noen som kan forklare hva det er?
 Ikke det, nei.
 
 Funksjonell programmering er et paradigme innen programmering, på samme måte
-som objektorientert programmering. 
+som objektorientert programmering. Det stammer fra en del av matematikken kalt
+Lambda Calculus.
 
 De siste årene har funksjonell programmering blitt mer og mer populært, så det
 er mange som tror at det er veldig nytt og moderne. Faktisk har det eksistert i over
@@ -149,7 +150,7 @@ er mange som tror at det er veldig nytt og moderne. Faktisk har det eksistert i 
 ???
 
 **Haskell** kom i 1987, og var et forsøk på å lage en åpen standard for forskning på
-funksjonell programmering.
+funksjonell programmering. Haskell regnes som et fullt funksjonelt språk.
 
 De siste årene har det kommet flere språk med funksjonelle elementer på JVM-plattformen. 
 Disse kompilerer altså til Java-bytecode, og kan kjøres av alle som har Java installert.
@@ -210,8 +211,11 @@ Det er noen egenskaper som gjør et språk mer eller mindre funksjonelt.
 De viktigste av disse egenskapene er:
 
 --
+
 * First-class functions
+
 ???
+
 **Førsteklasses funksjoner**, som betyr at funksjoner kan brukes på samme måte som variabler.
 Man kan sende inn en funksjon som et parameter til en annen funksjon, og den funksjonen kan
 igjen returnere en funksjon.
@@ -219,7 +223,6 @@ igjen returnere en funksjon.
 En funksjon som tar inn eller returnerer en funksjon, kalles en **higher-order function**.
 
 --
-
 * Immutable Values
 
 ???
@@ -232,7 +235,6 @@ Dette gjør det mye lettere å vite hva som foregår i en klasse, siden den kun 
 ett sted.
 
 --
-
 * Pure functions
 
 ???
@@ -242,17 +244,6 @@ og at det ikke er noen sideeffekter. I objektorientert programmering har man
 mange urene funksjoner, siden man aksesserer feltene til klassen.
 
 Rene funksjoner går hånd-i-hanske med immutable verdier.
-
---
-
-* Recursion
-
---
-* Strict versus non-strict evaluation
-* Type systems
-* Referential transparency
-* Functional programming in non-functional languages
-* Data structures
 
 ---
 class: contrast-page, middle
