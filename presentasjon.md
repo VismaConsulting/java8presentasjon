@@ -1,7 +1,22 @@
 class: first-page, right, middle
 
-# Java 8
+# Funksjonell programmering
+# i Java 8
 ## PGR-200
+
+???
+
+Hei, alle sammen, og takk for at vi fikk lov til å komme å snakke om Java 8, og
+funksjonell programmering for dere.
+
+---
+class: contrast-page, middle
+
+# Hvem er vi?
+
+???
+
+Dere lurer kanskje på hvem vi er?
 
 ---
 
@@ -13,6 +28,11 @@ class: leo
 * Konsulent hos NAV
 * Gikk ut av Westerdals i år
 
+???
+
+Jeg heter Leo, og var akkurat som dere for bare noen få måneder siden.
+Nå er jeg på den andre siden...
+
 ---
 class: andersemil, right
 # Anders Emil Salvesen
@@ -20,6 +40,25 @@ class: andersemil, right
 * Visma Consulting
 * Konsulent hos Skatteetaten
 * Gikk ut fra NTNU i 2012
+
+???
+
+... og jeg heter Anders Emil. Jeg har jobbet som konsulent i 
+Visma Consulting siden jeg gikk ut fra NTNU i 2012.
+
+Til daglig er jeg på prosjekt hos Skatteetaten, der jeg jobber med modernisering
+av skatteberegning. Der lager jeg de programmene som: 
+
+* Lager og sender deg skattetrekksmelding (skattekort)
+* Regner ut det som står nederst på selvangivelsen din.
+* Regner ut skatteoppgjøret som man får fra juni og utover.
+
+Selv om jeg jobber med dette, må jeg dessverre betale skatt som alle andre :/
+
+Jeg er også fagsjef i Visma Consulting. Det vil si at jeg har ansvaret for den faglige
+utviklingen som foregår utenfor prosjekt. Det er ganske viktig for en konsulentbedrift
+å hele tiden ha ansatte med oppdatert kunnskap. Derfor har vi mange faggrupper som
+arrangerer fagkvelder hele tiden.
 
 ---
 
@@ -42,9 +81,8 @@ Ferdigheter – kandidaten skal kunne
 
 # Agenda
 
-0. Hvem er vi, hvor kommer vi fra, hva gjør vi til vanlig osv
-1. Hva er funksjonell programmering? (Historietime)
-2. Eksempler på funksjonell programmering i Java 8 - på slides
+1. Hva er funksjonell programmering?
+2. Eksempler på funksjonell programmering i Java 8
 3. Refaktorere til Java 8 i IntelliJ - med innspill fra studentene
 4. Hvordan er dette implementert i Java 8? (Default Methods in Interfaces)
 5. Spesifikke interfacer: Predicat, Function, Supplier, Consumer
@@ -52,7 +90,93 @@ Ferdigheter – kandidaten skal kunne
 7. Øving
 
 ---
+class: contrast-page, middle
+# Hva er funksjonell programmering?
 
+???
+
+Så hva er funksjonell programmering? 
+
+Er det noen som kan forklare hva det er?
+
+---
+
+# Funksjonell programmering
+
+???
+
+Funksjonell programmering er et paradigme innen programmering, på samme måte
+som objektorientert programmering. 
+
+De siste årene har funksjonell programmering blitt mer og mer populært, så det
+er mange som tror at det er veldig nytt og moderne. Faktisk har det eksistert i over
+50 år, hvor Lisp var et av de første språkene med funksjonelle trekk.
+
+---
+
+## Lisp (1958)
+
+```lisp
+(DEFUN HELLO ()
+  "HELLO WORLD"
+)
+```
+
+--
+
+## APL (1962)
+```apl
+'Hello World'
+``` 
+
+## FP (Function Programming) (1977)
+
+```fp
+main = emit.(return ~"Hello, World!\n")
+```
+
+???
+**Lisp** er det nest eldste språket som er i bruk i dag (Fortran er eldst).
+ Lisp er ikke et fullstendig funksjonelt språk, og har blant annet også elementer
+ av prosedyreorientering i seg.
+ 
+**APL** kom i 1962.
+
+**FP** som ganske enkelt står for Function Programming kom i 1977. 
+
+
+---
+
+## Haskell 
+
+```haskell
+ main = do putStrLn "Hello, world."
+ ```
+
+???
+
+Haskell kom i 1987, og var et forsøk på å lage en åpen standard for forskning på
+funksjonell programmering. 
+
+---
+
+# Konsepter
+
+* First-class and higher-order functions
+* Pure functions
+* Recursion
+* Strict versus non-strict evaluation
+* Type systems
+* Referential transparency
+* Functional programming in non-functional languages
+* Data structures
+
+---
+class: contrast-page, middle
+
+# Java 8
+
+---
 ## Før Java 8
 
 ```java

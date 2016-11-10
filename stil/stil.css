@@ -69,6 +69,7 @@ h1 {
 
 .contrast-page h1, .contrast-page h2, .contrast-page h3 {
     color: white;
+    max-width: 50%;
 }
 
 .values-page {
