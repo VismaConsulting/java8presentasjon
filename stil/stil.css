@@ -10,6 +10,10 @@ p, ol, ul {
     font-size: 1.5em;
 }
 
+.green {
+    color: green;
+}
+
 .liten-tekst p, .liten-tekst ol, .liten-tekst ul {
     font-size: 1em;
 }

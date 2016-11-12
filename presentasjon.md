@@ -241,7 +241,8 @@ ett sted.
 
 **Pure functions**, eller rene funksjoner, betyr at outputen fra funksjonen kun er avhengig av inputen,
 og at det ikke er noen sideeffekter. I objektorientert programmering har man 
-mange urene funksjoner, siden man aksesserer feltene til klassen.
+mange urene funksjoner, siden man aksesserer feltene til klassen. Siden funksjoner i Java
+ofte modifiserer staten til klassen, kalles de egentlig metoder, ikke funksjoner.
 
 Konseptet om rene funksjoner går hånd-i-hanske med immutable verdier.
 
@@ -256,11 +257,133 @@ noe av det viktigste.
 
 ---
 
+# FP vs OO
+
+???
+
+Hva er forskjellen mellom funksjonell og objekt-orientert programmering?
+
+* Scala er både objekt-orientert og funksjonelt
+* Java 8 har funksjonelle elementer
+* Forskjellen er hvordan du bruker verktøyene du har til rådighet.
+
+I rene funksjonelle språk går det ikke an å programmere objekt-orientert. Det
+er ikke mulig å ha side-effekter, alle verdier er ikke-muterbare, 
+og du komponerer programmene dine ved hjelp av lambda-funksjoner i mye større grad.
+
+Det går også an å programmere funksjonelt i objekt-orienterte språk, men du må holde 
+tunga rett i munnen. Vi kan vise det med eksempler fra god gammeldags Java.
+
+--
+
+```java
+class IkkeFunksjonellPerson {
+    private int alder;
+    private String navn;
+    
+    public IkkeFunksjonellPerson(int alder, String navn) {
+        this.alder = alder;
+        this.navn = navn;
+    }
+    
+    public void setAlder(int alder) {
+        this.alder = alder;
+    }
+    
+    //osv
+}
+```
+
+???
+
+Det er ikke veldig funksjonelt hvis du gjør det mulig å mutere verdiene i en klasse.
+Her gjør `setAlder` klassen om til en muterbar klasse. `setAlder` foretar en side-effekt,
+så den er ikke en `pure-function`.
+
+---
+
+# FP vs OO
+
+
+```java
+class FunksjonellPerson {
+    private final int alder;
+    private final String navn;
+    
+    public FunksjonellPerson(int alder, String navn) {
+        this.alder = alder;
+        this.navn = navn;
+    }
+    
+    public int getAlder(int alder) {
+        return alder;
+    }
+    
+    // final, og ingen setter
+}
+```
+
+???
+
+Det er derimot mer funksjonelt hvis du gjør det på denne måten. Medlemmene av
+klassen er `final`, og kan ikke endres etter at de først er satt. Hvis denne personen
+fyller år eller gifter seg og derfor bytter navn, må man lage en ny instans.
+
+Og det er mye mer funksjonelt.
+
+Man kan altså velge å gjøre ting mer eller mindre funksjonelt i ikke-funksjonelle språk.
+La oss nå se litt nærmere på de nye funksjonelle elementene som er kommet i Java 8.
+
+---
+
 class: contrast-page, middle
 
 # Java 8
 
+???
+
+Med Java 8 ble det introdusert flere av konseptene over. Funksjoner er, eller fremstår
+ ihvertfall som førsteklasses medlemmer av språket, disse funksjonene er ofte utformet
+ som anonyme funksjoner, og de kan være parametre til andre funksjoner, så de blir altså
+ higher-order functions.
+ 
+ Noen ville argumentert for at lambdaene egentlig bare er syntaktisk sukker, men det
+ trenger vi ikke å bry oss om.
+
 ---
+
+# Programmering
+
+* Lambdaer 
+* Streams
+* Default methods
+
+---
+
+# Programmering
+
+* Lambdaer .green[&#10004;]
+* Streams
+* Default methods
+
+---
+
+# Programmering
+
+* Lambdaer .green[&#10004;]
+* Streams .green[&#10004;]
+* Default methods
+
+---
+
+# Programmering
+
+* Lambdaer .green[.green[&#10004;]]
+* Streams .green[&#10004;]
+* Default methods .green[&#10004;]
+
+---
+
 ## Før Java 8
 
 ```java
