@@ -239,13 +239,23 @@ ett sted.
 
 ???
 
-**Rene funksjoner** betyr at outputen fra funksjonen kun er avhengig av inputen,
+**Pure functions**, eller rene funksjoner, betyr at outputen fra funksjonen kun er avhengig av inputen,
 og at det ikke er noen sideeffekter. I objektorientert programmering har man 
 mange urene funksjoner, siden man aksesserer feltene til klassen.
 
-Rene funksjoner går hånd-i-hanske med immutable verdier.
+Konseptet om rene funksjoner går hånd-i-hanske med immutable verdier.
+
+--
+* Anonyme funksjoner (lambda)
+
+???
+
+Et annet viktig konsept er **anonyme funksjoner**, også kalt **lambda-funksjoner**. Det er
+en av tingene som har kommet til Java i versjon 8, og er sammen med det vi kaller streams
+noe av det viktigste.
 
 ---
+
 class: contrast-page, middle
 
 # Java 8
