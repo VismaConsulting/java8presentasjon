@@ -58,36 +58,36 @@ Selv om jeg jobber med dette, må jeg dessverre betale skatt som alle andre :/
 Jeg er også fagsjef i Visma Consulting. Det vil si at jeg har ansvaret for den faglige
 utviklingen som foregår utenfor prosjekt. Det er ganske viktig for en konsulentbedrift
 å hele tiden ha ansatte med oppdatert kunnskap. Derfor har vi mange faggrupper som
-arrangerer fagkvelder hele tiden.
+arrangerer fagkvelder hele tiden
 
 ---
 
-class: liten-tekst
-# Læringsmål
+# Faglig oppdatering i arbeidslivet
 
-Emnet gir også en smakebit på funksjonell programmering som et alternativt programmerings-paradigme til objekt-orientert programmering. 
-I den anledning vil det være naturlig å se hvordan også Java SE, fra versjon 8, inneholder funksjonelle elementer.
+* Internt
+  * I prosjekt
+  * Fagkvelder
+  * Fagsamlinger
+* Eksternt
+  * Javabin
+  * Konferanser
+  * Meetups
+  * YouTube
+  * Open Source
 
-Kunnskaper – kandidaten skal 
-* kjenne til forskjeller i objekt-orientert og funksjonell programmering
-* vite når det kan være fornuftig å benytte Lambda Expressions i Java
-* kjenne til streams-APIet, og når det er hensiktsmessig å benytte dette
+???
 
-Ferdigheter – kandidaten skal kunne
-* lese og skrive Java-kode som benytter Lambda expressions med relevante interface fra java.util.function-pakken som Predicate, Supplier, Consumer og Function
-* benytte funksjonelle operasjoner på en strøm av elementer, deriblant map-reduce.
+Vi tenkte at vi kunne si litt om hvordan vi liker å holde oss faglig oppdatert
+i Visma Consulting.
 
 ---
 
 # Agenda
 
 1. Hva er funksjonell programmering?
-2. Eksempler på funksjonell programmering i Java 8
-3. Refaktorere til Java 8 i IntelliJ - med innspill fra studentene
-4. Hvordan er dette implementert i Java 8? (Default Methods in Interfaces)
-5. Spesifikke interfacer: Predicat, Function, Supplier, Consumer
-6. Liste opp hva vi har lært
-7. Øving
+1. Funksjonell programmering i Java 8
+1. Liste opp hva vi har lært
+1. Øving
 
 ---
 class: contrast-page, middle
@@ -354,87 +354,23 @@ Med Java 8 ble det introdusert flere av konseptene over. Funksjoner er, eller fr
 
 # Programmering
 
-* Lambdaer 
+* Lambdaer
 * Streams
 * Default methods
-
----
-
-# Programmering
-
-* Lambdaer .green[&#10004;]
-* Streams
-* Default methods
-
----
-
-# Programmering
-
-* Lambdaer .green[&#10004;]
-* Streams .green[&#10004;]
-* Default methods
-
----
-
-# Programmering
-
-* Lambdaer .green[.green[&#10004;]]
-* Streams .green[&#10004;]
-* Default methods .green[&#10004;]
-
----
-
-## Før Java 8
-
-```java
-List<String> biltyper = Arrays.asList("VW", "Audi", "Jaguar");
-List<String> biltyperSomBegynnerPaaBokstavenA = new ArrayList<>();
-
-for (String biltype : biltyper) {
-    if (biltype.startsWith("A")) {
-        biltyperSomBegynnerPaaBokstavenA.add(biltype);
-    }
-}
-```
---
-## Etter Java 8
-
-```java
-List<String> biltyper = Arrays.asList("VW", "Audi", "Jaguar");
-List<String> biltyperSomBegynnerPaaBokstavenA = biltyper.stream()
-    .filter(biltype -> biltype.startsWith("a"))
-    .collect(Collectors.toList());
-```
-
----
-
-## Før Java 8
-
-```java
-List<String> frukter = Arrays.asList("eple", "banan", "pære", "eple");
-Map<String, Integer> antallPerFrukt = new HashMap<>();
-
-for (String frukt : frukter) {
-    if (!antallPerFrukt.hasKey(frukt)) {
-        antallPerFrukt.put(frukt, 0);
-    }
-    antallPerFrukt.put(frukt, antallPerFrukt.get(frukt)++);
-}
-```
---
-## Etter Java 8
-
-```java
-List<String> biltyper = Arrays.asList("VW", "Audi", "Jaguar");
-List<String> biltyperSomBegynnerPaaBokstavenA = biltyper.stream()
-    .groupingBy(Function.identity(), Collectors.counting());
-```
+* Funksjonelle Interfaces
+* Predicate - Filter
+* Lazy-evaluation
+* Function
+* Supplier
+* Consumer
+* Reduce
+* Flatmap
 
 ---
 class: contrast-page, left, middle
 
-# Title
-## Subtitle
+# Spørsmål?
+## Øving neste
 
 ---
 class: values-page
